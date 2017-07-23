@@ -8,9 +8,20 @@ app.use(function (ctx, next) {
   console.log(ctx.request.body)
   return bot(ctx.request.body.message.text || ctx.request.body.message)
   .then(function (answere) {
+    const body = ctx.request.body;
+
+    ctx.body = {
+      //form: {
+        chat_id: body.message.chat.id,
+        text: answere,
+        reply_to_message_id: body.message.message_id
+      // }
+    };
+
+    ctx.response.headers['Content-Type', 'application/json'];
 
     console.log("API Response recieved.");
-    ctx.body = answere;
+    // ctx.body = answere;
     next();
   });
 });
