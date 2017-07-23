@@ -6,7 +6,7 @@ const app = new Koa();
 app.use(bodyParser());
 app.use(function (ctx, next) {
   console.log(ctx.request.body)
-  return bot(ctx.request.body.message)
+  return bot(ctx.request.body.message.text || ctx.request.body.message)
   .then(function (answere) {
 
     console.log("API Response recieved.");
