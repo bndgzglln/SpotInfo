@@ -3,16 +3,16 @@ const MODE = ['Minor', 'Major'];
 const SIGNATURE = ['Leider nicht bekannt', '1/4', '1/2', '3/4', '4/4', '5/4'];
 const TRANSLATORMAP = {
   key: function (value)  {
-    return 'Tonart: ' + KEYMAP[value];
+    return 'Key: ' + KEYMAP[value];
   },
   mode: function (value)  {
-    return 'Modus: ' + MODE[value];
+    return 'Modi: ' + MODE[value];
   },
   tempo: function (value) {
     return 'Tempo:' + value + ' BPM';
   },
   time_signature: function (value)  {
-    return 'Taktangabe: ' + SIGNATURE[value];
+    return 'Time Signature: ' + SIGNATURE[value];
   },
 };
 
