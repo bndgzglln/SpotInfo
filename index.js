@@ -19,14 +19,8 @@ app.use(function (ctx, next) {
 
     ctx.response.headers['Content-Type', 'application/json'];
 
-    console.log("API Response recieved.");
-    // ctx.body = answere;
     next();
   });
 });
 
 app.listen(process.env.PORT ||3000);
-
-
-
-//console.log(process.argv[2]);
