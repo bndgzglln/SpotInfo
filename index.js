@@ -14,7 +14,7 @@ app.use(function (ctx, next) {
         method: "sendMessage",
         chat_id: body.message.chat.id,
         text: answere,
-        reply_to_message_id: body.message.message_id
+        //reply_to_message_id: body.message.message_id
     };
 
     ctx.response.headers['Content-Type', 'application/json'];
