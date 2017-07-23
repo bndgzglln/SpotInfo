@@ -6,6 +6,7 @@ var Spotify = require('machinepack-spotify');
 
 module.exports = function (link) {
   return new Promise(function(resolve, reject) {
+    if (!link) return reject("No link.");
 
     function loadAudioFeatures (token) {
       var target = {
