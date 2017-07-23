@@ -7,7 +7,7 @@
     "curlrequest": "^1.0.1",
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
-    "machinepack-spotify": "^0.0.3",
+    "machinepack-spotify": "0.0.3",
     "request": "^2.81.0"
   },
   "devDependencies": {},
@@ -16,4 +16,7 @@
   },
   "author": "",
   "license": "MIT"
+}
+"scripts": {
+    "start": "node index.js"
 }
