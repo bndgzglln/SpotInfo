@@ -4,7 +4,8 @@ var curl = require('curlrequest');
 var translator = require('./spotifyTranslator');
 var Spotify = require('machinepack-spotify');
 
-module.exports = function (link) {
+
+module.exports = function (link) { console.log(link);
   return new Promise(function(resolve, reject) {
     if (!link) return reject("No link.");
 
